@@ -1,0 +1,140 @@
+<pre class="example">
+<a href="#nodejitsu" class="trigger nodejitsu">Hide Nodejitsu specific information</a>
+{
+  <a href="#name">"name": "module-name",</a>
+  <a href="#version">"version": "10.3.1",</a>
+  <a href="#description">"description": "An example module to illustrate the usage of a package.json",</a>
+  <a href="#author">"author": "Your Name &lt;you.name@example.org&gt;",</a>
+  <a href="#contributors">"contributors": [{
+  "name": "Foo Bar",
+  "email": "foo.bar@example.com"
+}],</a>
+  <a href="#bin">"bin": {
+  "module-name": "./bin/module-name"
+},</a>
+  <a href="#script">"script": {</a>
+    <a href="#test">"test": "mocha",</a>
+    <a href="#start">"start": "node index.js",</a>
+    <a href="#predeploy" class="nodejitsu">"predeploy": "echo im about to deploy",</a>
+    <a href="#postdeploy" class="nodejitsu">"postdeploy": echo ive deployed",</a>
+    <a href="#prepublish">"prepublish": "coffee --bare --compile --output lib/foo src/foo/*.coffee"</a>
+  },
+  <a href="#main">"main": "index.js",</a>
+  <a href="#repository">"repository": {
+  "type": "git",
+  "url": "https://github.com/nodejitsu/browsenpm.org"
+},</a>
+  <a href="#bugs">"bugs": {
+  "url": "https://github.com/nodejitsu/browsenpm.org/issues"
+},</a>
+  <a href="#preferGlobal">"preferGlobal": true,</a>
+}
+</pre>
+<section class="guides">
+  <article class="guide">
+    <h1>
+      package.json <small>An interactive guide</small>
+    </h1>
+
+    <p>
+      This is an interactive guide for exploring various important properties of
+      the <a href="http://blog.nodejitsu.com/npm-cheatsheet/">package.json</a>
+      packaging format for <a href="http://nodejs.org">node.js</a> applications.
+    </p>
+    <p>
+      You can access information about properties by
+      <strong>mousing over</strong> or <strong>clicking</strong> the property name.
+    </p>
+  </article>
+
+  <article class="guide hidden" id="name">
+    <h2>name</h2>
+
+    <p>The unique name of your package. The name should be lowercase.</p>
+    <p>
+      This also indicates the name of you package in the public node module
+      registry (if you choose to publish it)
+    </p>
+    <p class="nodejitsu">
+      If you deploy your application on Nodejitsu, this property will represent the
+      name of your application.
+    </p>
+  </article>
+
+  <article class="guide hidden" id="version">
+    <h2>version</h2>
+
+    <p>
+      The version of the package is specified by
+      <a href="http://semver.org/">Semantic Versioning</a>. Which assumes that a
+      version number is written as <strong>MAJOR.MINOR.PATCH</strong> and you
+      increment the:
+
+      <ol>
+        <li><strong>MAJOR</strong> version when you make incompatible API changes</li>
+        <li><strong>MINOR</strong> version when you add functionality in a backwards-compatible manner</li>
+        <li><strong>PATCH</strong> version when you make backwards-compatible bug fixes</li>
+      </ol>
+    </p>
+  </article>
+
+  <article class="guide hidden" id="description">
+    <h2>description</h2>
+
+    <p>The description of the project. Try to keep it short and concise.</p>
+  </article>
+
+  <article class="guide hidden" id="author">
+    <h2>author</h2>
+
+    <p>The author of this package. Hopefully one day soon, it will be your name!</p>
+  </article>
+
+  <article class="guide hidden" id="contributors">
+    <h2>contributors</h2>
+
+    <p>
+      An array of objects representing contributors to the project. Each object in
+      the array represents one contributor.
+    </p>
+  </article>
+
+  <article class="guide hidden" id="bin">
+    <h2>bin</h2>
+
+    <p>
+      A object which is used to expose binary scripts from your package. The
+      object assumes that the key is the name of the binary script and the value
+      a relative path to the script.
+    </p>
+    <p>
+      This property is used by packages that contain a
+      contain a <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>
+      (command line interface).
+    </p>
+  </article>
+
+  <article class="guide hidden" id="scripts">
+    <h2>scripts</h2>
+
+    <p>
+      A object which exposes addition npm commands. The object assumes that the
+      key is the npm command and the value is the script path. These scripts can get
+      executed when you run <code>npm run {command name}</code> or
+      <code>npm run-script {command name}</code>.
+    </p>
+  </article>
+
+  <article class="guide hidden" id="preferGlobal">
+    <h2>preferGlobal</h2>
+
+    <p>
+      A property that indicates that this page prefers to be installed globally using
+      <code>npm install -g {module-name}</code>. This property is used by packages that
+      contain a <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>
+      (command line interface)
+    </p>
+    <p>In all other situations you should <strong>NOT</strong> use this property</p>
+  </article>
+
+</section>
