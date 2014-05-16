@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bigpipe": "*",
-    "ejs": "*"
+    "ejs": "*",
+    "winston": "flatiron/winston"
   }
 }

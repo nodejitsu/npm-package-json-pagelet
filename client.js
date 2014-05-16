@@ -12,7 +12,10 @@ pipe.once('package.json::render', function render(pagelet) {
    */
   placeholders.on('click mouseover', 'pre a:not(.trigger)', function guide() {
     guides.hide();
-    placeholders.find('#'+ this.href.split('#').pop()).fadeIn();
+
+    placeholders.find('#'+ this.href.split('#').pop().replace('.', '\\.'))
+      .css('top', $(document).scrollTop() + 100 +'px')
+      .show();
   });
 
   /**
