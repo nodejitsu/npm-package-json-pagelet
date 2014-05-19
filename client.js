@@ -1,4 +1,4 @@
-pipe.once('package.json::render', function render(pagelet) {
+pipe.once('package.json:render', function render(pagelet) {
   'use strict';
 
   var placeholders = $(pagelet.placeholders)
