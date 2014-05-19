@@ -66,6 +66,8 @@
   <a href="#publishConfig"><span class="key">"publishConfig": {
   <span class="key">"registry</span>": <span class="value">"https://your-private-hosted-npm.registry.nodejitsu.com"</span>
 },</a>
+  <a href="#subdomain" class="nodejitsu"><span class="key">"subdomain"</span>: <span class="value">"foobar"</span>,</a>
+  <a href="#analyze" class="nodejitsu"><span class="key">"analyze"</span>: <span class="boolean">true</span>,</a>
   <a href="#license"><span class="key">"license": <span class="value">"MIT"</span></a>
 }
 </pre>
@@ -426,6 +428,26 @@
     <p class="nodejitsu">
       If you don't have a private npm registry, you can get one over at Nodejitsu.
       <a href="https://www.nodejitsu.com/try/private-npm/">https://www.nodejitsu.com/try/private-npm/</a>
+    </p>
+  </article>
+
+  <article class="guide hidden" id="subdomain">
+    <h2>subdomain</h2>
+
+    <p>
+      Specifies the subdomain for your application. It should only include the
+      subdomain not the root domain and is limited to one level.
+    </p>
+  </article>
+
+  <article class="guide hidden">
+    <h2>analyze</h2>
+
+    <p>
+      At <a href="https://www.nodejitsu.com">Nodejitsu</a>, we will
+      automatically attempt to scan packages for missing dependencies, bugs, and
+      syntax errors. If you are confident your package is correct you can set
+      analyze to <strong>false</strong>.
     </p>
   </article>
 
