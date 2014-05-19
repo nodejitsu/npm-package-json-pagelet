@@ -14,7 +14,7 @@ pipe.once('package.json:render', function render(pagelet) {
     guides.hide();
 
     placeholders.find('#'+ this.href.split('#').pop().replace('.', '\\.'))
-      .css('top', $(document).scrollTop() + 100 +'px')
+      .css('top', $(document).scrollTop() +'px')
       .show();
   });
 
