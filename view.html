@@ -1,4 +1,4 @@
-<article class="intro">
+<article class="row intro">
   <h1>
     package.json <small>An interactive guide</small>
   </h1>
@@ -14,7 +14,8 @@
   </p>
 </article>
 
-<pre class="example">
+<section class="row">
+  <pre class="eightcol example">
 <a href="#nodejitsu" class="trigger" data-action="fadeOut"><span>Hide</span> Nodejitsu specific information</a>
 {
   <a href="#name"><span class="key">"name"</span>: <span class="value">"module-name"</span>,</a>
@@ -70,396 +71,396 @@
   <a href="#analyze" class="nodejitsu"><span class="key">"analyze"</span>: <span class="boolean">true</span>,</a>
   <a href="#license"><span class="key">"license": <span class="value">"MIT"</span></a>
 }
-</pre>
+  </pre>
 
-<section class="guides">
-  <article class="guide hidden" id="name">
-    <h2>name</h2>
+  <section class="fourcol last guides">
+    <article class="guide hidden" id="name">
+      <h2>name</h2>
 
-    <p>
-      The unique name of your package and should be down in lowercase. This property
-      is <strong>required</strong> and your package will not install without it.
-    </p>
-    <p>
-      This also indicates the name of you package in the public node module
-      registry (if you choose to publish it)
-    </p>
-    <p class="nodejitsu">
-      If you deploy your application on Nodejitsu, this property will represent the
-      name of your application.
-    </p>
-  </article>
+      <p>
+        The unique name of your package and should be down in lowercase. This property
+        is <strong>required</strong> and your package will not install without it.
+      </p>
+      <p>
+        This also indicates the name of you package in the public node module
+        registry (if you choose to publish it)
+      </p>
+      <p class="nodejitsu">
+        If you deploy your application on Nodejitsu, this property will represent the
+        name of your application.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="version">
-    <h2>version</h2>
+    <article class="guide hidden" id="version">
+      <h2>version</h2>
 
-    <p>
-      The version of the package is specified by
-      <a href="http://semver.org/">Semantic Versioning</a>. Which assumes that a
-      version number is written as <strong>MAJOR.MINOR.PATCH</strong> and you
-      increment the:
+      <p>
+        The version of the package is specified by
+        <a href="http://semver.org/">Semantic Versioning</a>. Which assumes that a
+        version number is written as <strong>MAJOR.MINOR.PATCH</strong> and you
+        increment the:
 
-      <ol>
-        <li><strong>MAJOR</strong> version when you make incompatible API changes</li>
-        <li><strong>MINOR</strong> version when you add functionality in a backwards-compatible manner</li>
-        <li><strong>PATCH</strong> version when you make backwards-compatible bug fixes</li>
-      </ol>
-    </p>
-  </article>
+        <ol>
+          <li><strong>MAJOR</strong> version when you make incompatible API changes</li>
+          <li><strong>MINOR</strong> version when you add functionality in a backwards-compatible manner</li>
+          <li><strong>PATCH</strong> version when you make backwards-compatible bug fixes</li>
+        </ol>
+      </p>
+    </article>
 
-  <article class="guide hidden" id="description">
-    <h2>description</h2>
+    <article class="guide hidden" id="description">
+      <h2>description</h2>
 
-    <p>The description of the project. Try to keep it short and concise.</p>
-  </article>
+      <p>The description of the project. Try to keep it short and concise.</p>
+    </article>
 
-  <article class="guide hidden" id="author">
-    <h2>author</h2>
+    <article class="guide hidden" id="author">
+      <h2>author</h2>
 
-    <p>The author of this package. Hopefully one day soon, it will be your name!</p>
-  </article>
+      <p>The author of this package. Hopefully one day soon, it will be your name!</p>
+    </article>
 
-  <article class="guide hidden" id="contributors">
-    <h2>contributors</h2>
+    <article class="guide hidden" id="contributors">
+      <h2>contributors</h2>
 
-    <p>
-      An array of objects representing contributors to the project. Each object in
-      the array represents one contributor.
-    </p>
-  </article>
+      <p>
+        An array of objects representing contributors to the project. Each object in
+        the array represents one contributor.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="bin">
-    <h2>bin</h2>
+    <article class="guide hidden" id="bin">
+      <h2>bin</h2>
 
-    <p>
-      A object which is used to expose binary scripts from your package. The
-      object assumes that the key is the name of the binary script and the value
-      a relative path to the script.
-    </p>
-    <p>
-      This property is used by packages that contain a
-      contain a <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>
-      (command line interface).
-    </p>
-  </article>
+      <p>
+        A object which is used to expose binary scripts from your package. The
+        object assumes that the key is the name of the binary script and the value
+        a relative path to the script.
+      </p>
+      <p>
+        This property is used by packages that contain a
+        contain a <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>
+        (command line interface).
+      </p>
+    </article>
 
-  <article class="guide hidden" id="script">
-    <h2>script</h2>
+    <article class="guide hidden" id="script">
+      <h2>script</h2>
 
-    <p>
-      A object which exposes addition npm commands. The object assumes that the
-      key is the npm command and the value is the script path. These scripts can get
-      executed when you run <code>npm run {command name}</code> or
-      <code>npm run-script {command name}</code>.
-    </p>
+      <p>
+        A object which exposes addition npm commands. The object assumes that the
+        key is the npm command and the value is the script path. These scripts can get
+        executed when you run <code>npm run {command name}</code> or
+        <code>npm run-script {command name}</code>.
+      </p>
 
-    <p>
-      Packages that contain a command line interface and are installed locally can
-      be called without a relative path. So instead of doing
-      <code>./node-modules/.bin/mocha</code> you can directly call
-      <code>mocha</code>.
-    </p>
-  </article>
+      <p>
+        Packages that contain a command line interface and are installed locally can
+        be called without a relative path. So instead of doing
+        <code>./node-modules/.bin/mocha</code> you can directly call
+        <code>mocha</code>.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="script.test">
-    <h2>test</h2>
+    <article class="guide hidden" id="script.test">
+      <h2>test</h2>
 
-    <p>
-      The test script for this package. When running <code>npm test</code> this
-      script will be called.
-    </p>
-  </article>
+      <p>
+        The test script for this package. When running <code>npm test</code> this
+        script will be called.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="script.start">
-    <h2>start</h2>
+    <article class="guide hidden" id="script.start">
+      <h2>start</h2>
 
-    <p>
-      The start-up script for the package. When running <code>npm start</code> this
-      script will be called.
-    </p>
+      <p>
+        The start-up script for the package. When running <code>npm start</code> this
+        script will be called.
+      </p>
 
-    <p class="nodejitsu">
-      If you've deployed your application to Nodejitsu this property will be
-      required and can be a relative path to the script that should be started.
-    </p>
-  </article>
+      <p class="nodejitsu">
+        If you've deployed your application to Nodejitsu this property will be
+        required and can be a relative path to the script that should be started.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="script.predeploy">
-    <h2>predeploy</h2>
+    <article class="guide hidden" id="script.predeploy">
+      <h2>predeploy</h2>
 
-    <p>
-      The pre-deploy script for this application. This script will run
-      <strong>before</strong> a snapshot of your package has been created. It
-      can therefor be used to compile and optimize assets before it's uploaded
-      to your application.
-    </p>
-  </article>
+      <p>
+        The pre-deploy script for this application. This script will run
+        <strong>before</strong> a snapshot of your package has been created. It
+        can therefor be used to compile and optimize assets before it's uploaded
+        to your application.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="script.postdeploy">
-    <h2>postdeploy</h2>
+    <article class="guide hidden" id="script.postdeploy">
+      <h2>postdeploy</h2>
 
-    <p>
-      The post-deploy script for this application. This script will run
-      <strong>after</strong> the application has been deployed.
-    </p>
-  </article>
+      <p>
+        The post-deploy script for this application. This script will run
+        <strong>after</strong> the application has been deployed.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="script.prepublish">
-    <h2>prepublish</h2>
+    <article class="guide hidden" id="script.prepublish">
+      <h2>prepublish</h2>
 
-    <p>
-      This pre-publish script is called <strong>before</strong> your package is
-      published to the npm registry. If you are using a programming language
-      that compiles to JavaScript you can put the compilation step here and add
-      the required package to your devDependencies.
-    </p>
-  </article>
+      <p>
+        This pre-publish script is called <strong>before</strong> your package is
+        published to the npm registry. If you are using a programming language
+        that compiles to JavaScript you can put the compilation step here and add
+        the required package to your devDependencies.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="main">
-    <h2>main</h2>
+    <article class="guide hidden" id="main">
+      <h2>main</h2>
 
-    <p>
-      The main entry point to your package. When calling
-      <code>require('{module name}')</code> in node, this will be actual file that
-      is required.
-    </p>
-    <p>
-      It's highly advised that requiring the main file does generate any side
-      affects. For instance, requiring the main file should not start up a HTTP
-      server or connect to a database. Instead, you should create something like a
-      <code>exports.init = function () {}</code> in your main script.
-    </p>
-  </article>
+      <p>
+        The main entry point to your package. When calling
+        <code>require('{module name}')</code> in node, this will be actual file that
+        is required.
+      </p>
+      <p>
+        It's highly advised that requiring the main file does generate any side
+        affects. For instance, requiring the main file should not start up a HTTP
+        server or connect to a database. Instead, you should create something like a
+        <code>exports.init = function () {}</code> in your main script.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="repository">
-    <h2>repostitory</h2>
+    <article class="guide hidden" id="repository">
+      <h2>repostitory</h2>
 
-    <p>
-      An object which is used to the specify the URL and type of source code
-      repository. This is helpful for people who want to contribute to your
-      module.
-    </p>
+      <p>
+        An object which is used to the specify the URL and type of source code
+        repository. This is helpful for people who want to contribute to your
+        module.
+      </p>
 
-    <p>
-      In our case we specify a <code>git</code> repository as our code is hosted
-      on <a href="https://github.com/nodejitsu/npm-package-json-pagelet">GitHub</a>
-    </p>
-  </article>
+      <p>
+        In our case we specify a <code>git</code> repository as our code is hosted
+        on <a href="https://github.com/nodejitsu/npm-package-json-pagelet">GitHub</a>
+      </p>
+    </article>
 
-  <article class="guide hidden" id="bugs">
-    <h2>bugs</h2>
+    <article class="guide hidden" id="bugs">
+      <h2>bugs</h2>
 
-    <p>
-      The URL and/or email address where bugs should be reported.
-    </p>
-  </article>
+      <p>
+        The URL and/or email address where bugs should be reported.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="keywords">
-    <h2>keywords</h2>
+    <article class="guide hidden" id="keywords">
+      <h2>keywords</h2>
 
-    <p>
-      An Array of keywords which describe your package. This will help people find
-      your package.
-    </p>
-  </article>
+      <p>
+        An Array of keywords which describe your package. This will help people find
+        your package.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="dependencies">
-    <h2>dependencies</h2>
+    <article class="guide hidden" id="dependencies">
+      <h2>dependencies</h2>
 
-    <p>
-      An object which contain the dependencies of your package. This will be
-      automatically installed when people install <strong>your</strong> package.
-      The key of the object is the name of the package and the value is a valid
-      <a href="semver.org">semver range</a>.
-    </p>
-  </article>
+      <p>
+        An object which contain the dependencies of your package. This will be
+        automatically installed when people install <strong>your</strong> package.
+        The key of the object is the name of the package and the value is a valid
+        <a href="semver.org">semver range</a>.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="dependency.primus">
-    <p>
-      Require the <a href="http://github.com/primus/primus">Primus</a> module as
-      a dependency with a wildcard (*) version. Using a wildcard version is usually
-      <strong>NOT</strong> recommended as the latest version of this module is
-      installed which could contain breaking API changes.
-    </p>
-  </article>
+    <article class="guide hidden" id="dependency.primus">
+      <p>
+        Require the <a href="http://github.com/primus/primus">Primus</a> module as
+        a dependency with a wildcard (*) version. Using a wildcard version is usually
+        <strong>NOT</strong> recommended as the latest version of this module is
+        installed which could contain breaking API changes.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="dependency.async">
-    <p>
-      Require the <a href="http://github.com/caolan/async">async</a> module as a
-      dependency. The ~ in this version is basically a shorthand for
-      <code>&gt;= 0.8.0 &lt; 0.9.0</code>.
-    </p>
+    <article class="guide hidden" id="dependency.async">
+      <p>
+        Require the <a href="http://github.com/caolan/async">async</a> module as a
+        dependency. The ~ in this version is basically a shorthand for
+        <code>&gt;= 0.8.0 &lt; 0.9.0</code>.
+      </p>
 
-    <p>
-      The hope here, is that the package author has followed
-      <a href="http://blog.nodejitsu.com/package-dependencies-done-right">best-practices</a>
-      and <strong>patch</strong> versions of the package will
-      <strong>NOT</strong> be breaking.
-    </p>
-  </article>
+      <p>
+        The hope here, is that the package author has followed
+        <a href="http://blog.nodejitsu.com/package-dependencies-done-right">best-practices</a>
+        and <strong>patch</strong> versions of the package will
+        <strong>NOT</strong> be breaking.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="dependency.express">
-    <p>
-      Require the <a href="https://github.com/visionmedia/express">express</a>
-      module as a dependency. The ^ in this version is a shorthand for
-      <code>&gt;=4.2.0 &lt; 5.0.0</code>.
-    </p>
+    <article class="guide hidden" id="dependency.express">
+      <p>
+        Require the <a href="https://github.com/visionmedia/express">express</a>
+        module as a dependency. The ^ in this version is a shorthand for
+        <code>&gt;=4.2.0 &lt; 5.0.0</code>.
+      </p>
 
-    <p>
-      The hope here, is that the package author has followed
-      <a href="http://blog.nodejitsu.com/package-dependencies-done-right">best-practices</a>
-      and <strong>patch</strong> versions of the package will
-      <strong>NOT</strong> be breaking.
-    </p>
-  </article>
+      <p>
+        The hope here, is that the package author has followed
+        <a href="http://blog.nodejitsu.com/package-dependencies-done-right">best-practices</a>
+        and <strong>patch</strong> versions of the package will
+        <strong>NOT</strong> be breaking.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="dependency.winston">
-    <p>
-      Require the <a href="http://github.com/flatiron/winston">winston</a> module
-      as a dependency directly from GitHub as git repository. The
-      <code>#master</code> specifies which branch or SHA should be installed.
-    </p>
-  </article>
+    <article class="guide hidden" id="dependency.winston">
+      <p>
+        Require the <a href="http://github.com/flatiron/winston">winston</a> module
+        as a dependency directly from GitHub as git repository. The
+        <code>#master</code> specifies which branch or SHA should be installed.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="dependency.bigpipe">
-    <p>
-      Require the <a href="http://github.com/bigpipe/bigpipe">bigpipe</a> module
-      as a dependency directly from GitHub. Please note that this will install the
-      master branch of the repository. It's great for development but not
-      recommended for production usage.
-    </p>
-  </article>
+    <article class="guide hidden" id="dependency.bigpipe">
+      <p>
+        Require the <a href="http://github.com/bigpipe/bigpipe">bigpipe</a> module
+        as a dependency directly from GitHub. Please note that this will install the
+        master branch of the repository. It's great for development but not
+        recommended for production usage.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="dependency.plates">
-    <p>
-      Require the <a href="https://github.com/flatiron/plates">plates</a> module
-      as a dependency directly from GitHub. Links take the form of
-      https://github.com/<code>:username</code>/<code>:reponame</code>/tarball/<code>:branchname</code>
-    </p>
-  </article>
+    <article class="guide hidden" id="dependency.plates">
+      <p>
+        Require the <a href="https://github.com/flatiron/plates">plates</a> module
+        as a dependency directly from GitHub. Links take the form of
+        https://github.com/<code>:username</code>/<code>:reponame</code>/tarball/<code>:branchname</code>
+      </p>
+    </article>
 
-  <article class="guide hidden" id="devDependencies">
-    <h2>devDependencies</h2>
+    <article class="guide hidden" id="devDependencies">
+      <h2>devDependencies</h2>
 
-    <p>
-      These are the dependencies that are only intended for
-      <strong>development</strong> and <strong>testing</strong> of your module.
-      The dependencies will be installed automatically unless the
-      <code>NODE_ENV=production</code> <a
-        href="http://en.wikipedia.org/wiki/Environment_variable">environment
-        variable</a> has been set. If this is the case you can still these
-      packages using <code>npm install --dev</code>
-    </p>
-  </article>
+      <p>
+        These are the dependencies that are only intended for
+        <strong>development</strong> and <strong>testing</strong> of your module.
+        The dependencies will be installed automatically unless the
+        <code>NODE_ENV=production</code> <a
+          href="http://en.wikipedia.org/wiki/Environment_variable">environment
+          variable</a> has been set. If this is the case you can still these
+        packages using <code>npm install --dev</code>
+      </p>
+    </article>
 
-  <article class="guide hidden" id="devDependency.vows">
-    <p>
-      Require the <a href="https://github.com/flatiron/vows">vows</a>module as
-      development dependency. The ^ in the version is a shorthand for
-      <code>&gt;=0.7.0 &lt; 1.0.0</code>.
-    </p>
-  </article>
+    <article class="guide hidden" id="devDependency.vows">
+      <p>
+        Require the <a href="https://github.com/flatiron/vows">vows</a>module as
+        development dependency. The ^ in the version is a shorthand for
+        <code>&gt;=0.7.0 &lt; 1.0.0</code>.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="devDependency.assume">
-    <p>
-      Require the <a href="https://github.com/3rd-Eden/assume">assume</a> module
-      as development dependency. The version that gets installed has to satisfy
-      the given semver range.
-    </p>
-  </article>
+    <article class="guide hidden" id="devDependency.assume">
+      <p>
+        Require the <a href="https://github.com/3rd-Eden/assume">assume</a> module
+        as development dependency. The version that gets installed has to satisfy
+        the given semver range.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="devDependency.pre-commit">
-    <p>
-      Require the <a href="https://github.com/observing/pre-commit">pre-commit</a>
-      module as development dependency using a <strong>wildcard</strong> version.
-      Using * as wildcard is usually <strong>NOT</strong> recommended. The pre-commit
-      module is unique as it's API will never change and only interacts with git
-      hooks when installed.
-    </p>
-  </article>
+    <article class="guide hidden" id="devDependency.pre-commit">
+      <p>
+        Require the <a href="https://github.com/observing/pre-commit">pre-commit</a>
+        module as development dependency using a <strong>wildcard</strong> version.
+        Using * as wildcard is usually <strong>NOT</strong> recommended. The pre-commit
+        module is unique as it's API will never change and only interacts with git
+        hooks when installed.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="preferGlobal">
-    <h2>preferGlobal</h2>
+    <article class="guide hidden" id="preferGlobal">
+      <h2>preferGlobal</h2>
 
-    <p>
-      A property that indicates that this page prefers to be installed globally
-      using <code>npm install -g {module-name}</code>. This property is used by
-      packages that contain a
-      <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>
-      (command line interface).
-    </p>
-    <p>
-      In all other situations you should <strong>NOT</strong> use this property.
-    </p>
-  </article>
+      <p>
+        A property that indicates that this page prefers to be installed globally
+        using <code>npm install -g {module-name}</code>. This property is used by
+        packages that contain a
+        <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a>
+        (command line interface).
+      </p>
+      <p>
+        In all other situations you should <strong>NOT</strong> use this property.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="private">
-    <h2>private</h2>
+    <article class="guide hidden" id="private">
+      <h2>private</h2>
 
-    <p>
-      By setting <strong>private</strong> to <code>true</code>, npm will refuse
-      to publish it. This prevents accidental publishes to the
-      <strong>public</strong> npm registry.
-    </p>
-    <p>
-      Keeping modules unpublished because they are private is really painful to
-      manage and deploy. A better option might be to use the
-      <code>publishConfig</code> property to <a
-        href="https://www.nodejitsu.com/try/private-npm/">publish your private modules to
-        your private npm</a>
-    </p>
-  </article>
+      <p>
+        By setting <strong>private</strong> to <code>true</code>, npm will refuse
+        to publish it. This prevents accidental publishes to the
+        <strong>public</strong> npm registry.
+      </p>
+      <p>
+        Keeping modules unpublished because they are private is really painful to
+        manage and deploy. A better option might be to use the
+        <code>publishConfig</code> property to <a
+          href="https://www.nodejitsu.com/try/private-npm/">publish your private modules to
+          your private npm</a>
+      </p>
+    </article>
 
-  <article class="guide hidden" id="publishConfig">
-    <h2>publishConfig</h2>
+    <article class="guide hidden" id="publishConfig">
+      <h2>publishConfig</h2>
 
-    <p>
-      The publishConfig is an object with configuration values that will be used
-      for publishing modules. The configuration values that are set override
-      your default npm configuration.
-    </p>
-    <p>
-      The most common use of the publishConfig is to publish your package to a
-      <a href="https://www.nodejitsu.com/try/private-npm/">private npm registry</a>
-      so you still have the benifits of npm but for private packages. This is done
-      by simply setting URL of your private npm as value for the <code>registry</code>
-      key.
-    </p>
-    <p class="nodejitsu">
-      If you don't have a private npm registry, you can get one over at Nodejitsu.
-      <a href="https://www.nodejitsu.com/try/private-npm/">https://www.nodejitsu.com/try/private-npm/</a>
-    </p>
-  </article>
+      <p>
+        The publishConfig is an object with configuration values that will be used
+        for publishing modules. The configuration values that are set override
+        your default npm configuration.
+      </p>
+      <p>
+        The most common use of the publishConfig is to publish your package to a
+        <a href="https://www.nodejitsu.com/try/private-npm/">private npm registry</a>
+        so you still have the benifits of npm but for private packages. This is done
+        by simply setting URL of your private npm as value for the <code>registry</code>
+        key.
+      </p>
+      <p class="nodejitsu">
+        If you don't have a private npm registry, you can get one over at Nodejitsu.
+        <a href="https://www.nodejitsu.com/try/private-npm/">https://www.nodejitsu.com/try/private-npm/</a>
+      </p>
+    </article>
 
-  <article class="guide hidden" id="subdomain">
-    <h2>subdomain</h2>
+    <article class="guide hidden" id="subdomain">
+      <h2>subdomain</h2>
 
-    <p>
-      Specifies the subdomain for your application. It should only include the
-      subdomain not the root domain and is limited to one level.
-    </p>
-  </article>
+      <p>
+        Specifies the subdomain for your application. It should only include the
+        subdomain not the root domain and is limited to one level.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="analyze">
-    <h2>analyze</h2>
+    <article class="guide hidden" id="analyze">
+      <h2>analyze</h2>
 
-    <p>
-      At <a href="https://www.nodejitsu.com">Nodejitsu</a>, we will
-      automatically attempt to scan packages for missing dependencies, bugs, and
-      syntax errors. If you are confident your package is correct you can set
-      analyze to <strong>false</strong>.
-    </p>
-  </article>
+      <p>
+        At <a href="https://www.nodejitsu.com">Nodejitsu</a>, we will
+        automatically attempt to scan packages for missing dependencies, bugs, and
+        syntax errors. If you are confident your package is correct you can set
+        analyze to <strong>false</strong>.
+      </p>
+    </article>
 
-  <article class="guide hidden" id="license">
-    <h2>license</h2>
+    <article class="guide hidden" id="license">
+      <h2>license</h2>
 
-    <p>
-      Under which <a href="http://opensource.org/licenses">Open Source</a> you
-      code has been released.
-    </p>
-    <p>
-      <a href="http://opensource.org/licenses/MIT">MIT</a> is a good choice.
-    </p>
-  </article>
-</section>
+      <p>
+        Under which <a href="http://opensource.org/licenses">Open Source</a> you
+        code has been released.
+      </p>
+      <p>
+        <a href="http://opensource.org/licenses/MIT">MIT</a> is a good choice.
+      </p>
+    </article>
+  </section>
