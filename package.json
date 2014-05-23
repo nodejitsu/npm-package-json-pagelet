@@ -1,11 +1,8 @@
 {
   "name": "npm-package-json-pagelet",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Interactive package.json exploration",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "package.json",
     "package",
