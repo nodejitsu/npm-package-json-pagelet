@@ -11,12 +11,11 @@ pipe.once('package.json:render', function render(pagelet) {
    * @api private
    */
   placeholders.on('click mouseover', 'pre a:not(.trigger)', function guide() {
-    var scroll = $(document).scrollTop()
-      , offset = scroll - guides.parent().offset().top;
+    var offset = $(document).scrollTop() - guides.parent().offset().top;
 
     guides.hide();
     placeholders.find('#'+ this.href.split('#').pop().replace('.', '\\.'))
-      .css('top', (offset < 0 ? scroll : offset) +'px')
+      .css('top', (offset < 0 ? 0 : offset) +'px')
       .show();
   });
 
