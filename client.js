@@ -19,14 +19,20 @@ pipe.once('package.json:render', function render(pagelet) {
   });
 
   /**
-   * Hide all nodejitsu specific configuration values.
+   * Toggle all nodejitsu specific configuration values.
    *
    * @param {Event} e DOM event.
    * @api private
    */
-  placeholders.on('click', 'a.nodejitsu', function nodejitsu(e) {
-    e.preventDefault();
+  placeholders.on('click', 'a.trigger', function nodejitsu(e) {
+    var element = $(this)
+      , action = element.data('action')
+      , hide = action === 'fadeOut';
 
-    placeholders.find('.nodejitsu').fadeOut();
+    element.data('action', hide ? 'fadeIn' : 'fadeOut');
+    element.find('span').text(hide ? 'Show' : 'Hide');
+    placeholders.find('.nodejitsu')[action]();
+
+    e.preventDefault();
   });
 });
