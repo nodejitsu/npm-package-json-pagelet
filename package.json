@@ -1,6 +1,6 @@
 {
   "name": "npm-package-json-pagelet",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Interactive package.json exploration",
   "main": "index.js",
   "keywords": [
