@@ -1,6 +1,6 @@
 {
   "name": "npm-package-json-pagelet",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Interactive package.json exploration",
   "main": "index.js",
   "keywords": [
@@ -11,6 +11,6 @@
   "author": "Arnout Kazemier",
   "license": "MIT",
   "dependencies": {
-    "pagelet": "0.6.x"
+    "pagelet": "0.7.x"
   }
 }
