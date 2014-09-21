@@ -29,12 +29,12 @@
   <a href="#bin"><span class="key">"bin"</span>: {
   <span class="key">"module-name"</span>: <span class="value">"./bin/module-name"</span>
 },</a>
-  <a href="#script"><span class="key">"script"</span>: {</a>
-    <a href="#script.test"><span class="key">"test"</span>: <span class="value">"vows --spec --isolate"</span>,</a>
-    <a href="#script.start"><span class="key">"start"</span>: <span class="value">"node index.js"</span>,</a>
-    <a href="#script.predeploy" class="nodejitsu"><span class="key">"predeploy"</span>: <span class="value">"echo im about to deploy"</span>,</a>
-    <a href="#script.postdeploy" class="nodejitsu"><span class="key">"postdeploy"</span>: <span class="value">"echo ive deployed"</span>,</a>
-    <a href="#script.prepublish"><span class="key">"prepublish"</span>: <span class="value">"coffee --bare --compile --output lib/foo src/foo/*.coffee"</span></a>
+  <a href="#scripts"><span class="key">"scripts"</span>: {</a>
+    <a href="#scripts.test"><span class="key">"test"</span>: <span class="value">"vows --spec --isolate"</span>,</a>
+    <a href="#scripts.start"><span class="key">"start"</span>: <span class="value">"node index.js"</span>,</a>
+    <a href="#scripts.predeploy" class="nodejitsu"><span class="key">"predeploy"</span>: <span class="value">"echo im about to deploy"</span>,</a>
+    <a href="#scripts.postdeploy" class="nodejitsu"><span class="key">"postdeploy"</span>: <span class="value">"echo ive deployed"</span>,</a>
+    <a href="#scripts.prepublish"><span class="key">"prepublish"</span>: <span class="value">"coffee --bare --compile --output lib/foo src/foo/*.coffee"</span></a>
   },
   <a href="#main"><span class="key">"main"</span>: <span class="value">"lib/foo.js"</span>,</a>
   <a href="#repository"><span class="key">"repository"</span>: {
@@ -144,7 +144,7 @@
       </p>
     </article>
 
-    <article class="guide hidden" id="script">
+    <article class="guide hidden" id="scripts">
       <h2>script</h2>
 
       <p>
@@ -162,7 +162,7 @@
       </p>
     </article>
 
-    <article class="guide hidden" id="script.test">
+    <article class="guide hidden" id="scripts.test">
       <h2>test</h2>
 
       <p>
@@ -171,7 +171,7 @@
       </p>
     </article>
 
-    <article class="guide hidden" id="script.start">
+    <article class="guide hidden" id="scripts.start">
       <h2>start</h2>
 
       <p>
@@ -185,7 +185,7 @@
       </p>
     </article>
 
-    <article class="guide hidden" id="script.predeploy">
+    <article class="guide hidden" id="scripts.predeploy">
       <h2>predeploy</h2>
 
       <p>
@@ -196,7 +196,7 @@
       </p>
     </article>
 
-    <article class="guide hidden" id="script.postdeploy">
+    <article class="guide hidden" id="scripts.postdeploy">
       <h2>postdeploy</h2>
 
       <p>
@@ -205,7 +205,7 @@
       </p>
     </article>
 
-    <article class="guide hidden" id="script.prepublish">
+    <article class="guide hidden" id="scripts.prepublish">
       <h2>prepublish</h2>
 
       <p>
