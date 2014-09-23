@@ -221,19 +221,19 @@
 
       <p>
         The main entry point to your package. When calling
-        <code>require('{module name}')</code> in node, this will be actual file that
+        <code>require('{module name}')</code> in node, this will be the actual file that
         is required.
       </p>
       <p>
-        It's highly advised that requiring the main file does generate any side
-        affects. For instance, requiring the main file should not start up a HTTP
+        It's highly advised that requiring the main file does not generate any side
+        affects. For instance, requiring the main file should not start up an HTTP
         server or connect to a database. Instead, you should create something like a
         <code>exports.init = function () {}</code> in your main script.
       </p>
     </article>
 
     <article class="guide hidden" id="repository">
-      <h2>repostitory</h2>
+      <h2>repository</h2>
 
       <p>
         An object which is used to the specify the URL and type of source code
@@ -271,7 +271,7 @@
         An object which contain the dependencies of your package. This will be
         automatically installed when people install <strong>your</strong> package.
         The key of the object is the name of the package and the value is a valid
-        <a href="semver.org">semver range</a>.
+        <a href="http://www.semver.org">semver range</a>.
       </p>
     </article>
 
