@@ -1,8 +1,16 @@
 {
   "name": "npm-package-json-pagelet",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Interactive package.json exploration",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nodejitsu/npm-package-json-pagelet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nodejitsu/npm-package-json-pagelet/issues"
+  },
+  "homepage": "https://github.com/nodejitsu/npm-package-json-pagelet",
   "keywords": [
     "package.json",
     "package",

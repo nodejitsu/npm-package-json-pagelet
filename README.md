@@ -62,7 +62,7 @@ Page.extend({
 
 ## License
 
-MIT
+[MIT](LICENSE)
 
 [Pagelet]: https://github.com/bigpipe/pagelet
 [BigPipe]: https://github.com/bigpipe/bigpipe
